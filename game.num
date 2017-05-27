@@ -1,0 +1,38 @@
+#!/usr/bin/python
+
+import random
+import sys
+
+
+# 1. Print name ( Number Guess)
+# 2. Print instructions 
+# 3. Start game
+# 4. Computer picks a number
+# 5. Player guesses the computer pick
+# 6. if player guesses right player wins
+# 7. if player guesses wrong, player tries again
+
+print(" Guessing Game (TM) 2017 BBS Project")  
+print ("""
+
+This is the number guessing game. The objective of the game is to guess a number that the computer picks which ranges from 0-999.
+""")
+def print_hint(guess):
+	if guess > num:
+		print("Guess too high")
+	if guess < num:
+		print("Guess too low")
+
+num = random.randint(0,10)
+print(num)
+while True: 
+
+	guess = int(raw_input("What yo numba foo?!?!?"))
+	print("You guessed %s" % guess)
+	if (guess == num):
+		print (" You guessed the secret number foo!!")
+		sys.exit()
+	print_hint(guess)
+
+	print("You guessed wrong foo!!")
+
